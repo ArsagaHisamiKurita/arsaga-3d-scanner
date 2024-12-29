@@ -1,1 +1,1 @@
-# arsaga-polycam
+# arsaga-3d-scanner
