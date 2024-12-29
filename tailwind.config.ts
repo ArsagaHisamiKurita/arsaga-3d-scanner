@@ -8,7 +8,11 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'lato': ['var(--font-robot)'],
+      },
       colors: {
+        main: "#e8374a",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },

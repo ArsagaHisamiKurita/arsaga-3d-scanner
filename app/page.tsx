@@ -1,101 +1,50 @@
-import Image from "next/image";
-
-export default function Home() {
+export const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="relative w-full h-full">
+      {/* タイル */}
+      <div className="absolute top-0 left-0 w-full h-full grid grid-cols-5 grid-rows-4">
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+        <div className="bg-neutral-950"></div>
+      </div>
+      {/* 外枠線 */}
+      <span className="absolute top-0 left-0 w-full h-1 bg-main opacity-80"></span>
+      <span className="absolute top-0 right-0 w-1 h-full bg-main opacity-80"></span>
+      <span className="absolute bottom-0 left-0 w-full h-1 bg-main opacity-80"></span>
+      <span className="absolute bottom-0 left-0 w-1 h-full bg-main opacity-80"></span>
+      {/* 内枠線 */}
+      <span className="absolute top-0 left-[calc(100%_/_5)] w-[1px] h-full bg-main opacity-30"></span>
+      <span className="absolute top-0 left-[calc(100%_/_5_*_2)] w-[1px] h-full bg-main opacity-30"></span>
+      <span className="absolute top-0 left-[calc(100%_/_5_*_3)] w-[1px] h-full bg-main opacity-30"></span>
+      <span className="absolute top-0 left-[calc(100%_/_5_*_4)] w-[1px] h-full bg-main opacity-30"></span>
+      <span className="absolute top-[calc(100%_/_4)] left-0 w-full h-[1px] bg-main opacity-30"></span>
+      <span className="absolute top-[calc(100%_/_4_*_2)] left-0 w-full h-[1px] bg-main opacity-30"></span>
+      <span className="absolute top-[calc(100%_/_4_*_3)] left-0 w-full h-[1px] bg-main opacity-30"></span>
+      {/* コンテンツ */}
+      <div className="relative p-16 text-white">
+        <h1 className="font-lato font-bold text-6xl">Arsaga 3D Scanner Experiments</h1>
+        <p className="mt-9 font-bold text-xl">「現実の形状をデジタルに。」</p>
+        <p className="mt-7 leading-8">Arsaga 3D Scanner Experimentsは、最先端の3Dスキャニング技術を用いて、<br />現実世界の形状や質感をデジタルデータとして記録・再現する実験的なプロジェクトです。<br />このサイトでは、スキャニングプロセスから得られる可能性と美しさを探求し、<br />未来のデザインやアートの新しい表現方法を模索しています。<br />リアルとバーチャルが交差する瞬間をご体感ください。</p>
+      </div>
     </div>
   );
 }
+
+export default Home;
