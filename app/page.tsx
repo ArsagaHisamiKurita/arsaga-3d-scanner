@@ -1,29 +1,11 @@
+import { Canvas } from "./canvas";
+import { Tile } from "./tile";
+
 export const Home = () => {
   return (
     <div className="relative w-full h-full">
       {/* タイル */}
-      <div className="absolute top-0 left-0 w-full h-full grid grid-cols-5 grid-rows-4">
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-        <div className="bg-neutral-950"></div>
-      </div>
+      <Tile />
       {/* 外枠線 */}
       <span className="absolute top-0 left-0 w-full h-1 bg-main opacity-80"></span>
       <span className="absolute top-0 right-0 w-1 h-full bg-main opacity-80"></span>
@@ -37,6 +19,10 @@ export const Home = () => {
       <span className="absolute top-[calc(100%_/_4)] left-0 w-full h-[1px] bg-main opacity-30"></span>
       <span className="absolute top-[calc(100%_/_4_*_2)] left-0 w-full h-[1px] bg-main opacity-30"></span>
       <span className="absolute top-[calc(100%_/_4_*_3)] left-0 w-full h-[1px] bg-main opacity-30"></span>
+      {/* キャンバス */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <Canvas />
+      </div>
       {/* コンテンツ */}
       <div className="relative p-16 text-white">
         <h1 className="font-lato font-bold text-6xl">Arsaga 3D Scanner Experiments</h1>
