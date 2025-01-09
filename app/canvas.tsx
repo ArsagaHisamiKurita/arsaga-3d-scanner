@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { parseImagePixel } from '../utils'
+import { parseImagePixel } from './utils'
 import logo from '../public/logo.png'
 import { gsap } from 'gsap'
 
@@ -62,7 +62,7 @@ export const Canvas = () => {
     window.addEventListener('resize', resize)
 
     /**
-     * Objects
+     * Logo
      */
     const promiseList: Promise<void>[] = []
     const pathList = [
@@ -175,6 +175,11 @@ export const Canvas = () => {
         delay: 0.2
       })
     })
+
+    /**
+     * Background
+     */
+
 
     /**
      * Raf
