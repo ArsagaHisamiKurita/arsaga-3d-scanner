@@ -44,14 +44,14 @@ export const Demo01 = () => {
 			renderer.domElement,
 		);
     orbitcontrols.enableDamping = true;
-    scene.add(new THREE.GridHelper(5000, 100));
-		scene.add(new THREE.AxesHelper(500));
+    // scene.add(new THREE.GridHelper(5000, 100));
+		// scene.add(new THREE.AxesHelper(500));
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 5.0);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.0);
     scene.add(ambientLight);
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 2.5);
-    scene.add(directionalLight);
+    // const directionalLight = new THREE.DirectionalLight(0xffffff, 2.5);
+    // scene.add(directionalLight);
 
     const resize = () => {
       const width = window.innerWidth
@@ -71,12 +71,12 @@ export const Demo01 = () => {
      * Model
      */
     const loader = new GLTFLoader();
-    const url = "../koil.gltf";
+    const url = "../demo02.glb";
 
     loader.load(
       url,
       (gltf) => {
-        gltf.scene.scale.set(60, 60, 60);
+        gltf.scene.scale.set(300, 300, 300);
         scene.add(gltf.scene);
       },
       (error) => {
