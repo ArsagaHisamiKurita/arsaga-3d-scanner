@@ -47,23 +47,15 @@ export const Canvas = () => {
     // scene.add(new THREE.GridHelper(5000, 100));
 		// scene.add(new THREE.AxesHelper(500));
 
-    const resize = () => {
-      const width = window.innerWidth
-      const height = window.innerHeight
-      camera.aspect = width / height
-      camera.updateProjectionMatrix()
-      const fov = 60;
-      const fovRad = (fov / 2) * (Math.PI / 180);
-      const dist = height / 2 / Math.tan(fovRad);
-      camera.position.z = dist;
-      renderer.setSize(width, height)
-      renderer.setPixelRatio(window.devicePixelRatio)
-    }
-    window.addEventListener('resize', resize)
-
     /**
      * Logo
      */
+    let mesh: THREE.Object3D<THREE.Object3DEventMap> | null = null;
+    // メッシュを右端に移動
+    const buffer = {
+      x: 66,
+      y: 60,
+    }
     const promiseList: Promise<void>[] = []
     const pathList = [
       logo.src,
@@ -150,15 +142,10 @@ export const Canvas = () => {
         },
         transparent: true
       });
-      const mesh = new THREE.Points(geometry, material);
-      // メッシュを右端に移動
-      const buffer = {
-        x: 66,
-        y: 60,
-      }
+      mesh = new THREE.Points(geometry, material);
       const x = (window.innerWidth / 2) - (imageSize.width / 2) - buffer.x;
       const y = (window.innerHeight / 2) - (imageSize.height / 2) - buffer.y;
-      mesh.position.set(x, -y, 0);
+      if (mesh && window.innerWidth > 767) mesh.position.set(x, -y, 0);
       scene.add(mesh);
 
       // アニメーション
@@ -177,11 +164,6 @@ export const Canvas = () => {
     })
 
     /**
-     * Background
-     */
-
-
-    /**
      * Raf
      */
     const raf = () => {
@@ -192,8 +174,27 @@ export const Canvas = () => {
     }
     raf()
 
+    const resize = () => {
+      const width = window.innerWidth
+      const height = window.innerHeight
+      camera.aspect = width / height
+      camera.updateProjectionMatrix()
+      const fov = 60;
+      const fovRad = (fov / 2) * (Math.PI / 180);
+      const dist = height / 2 / Math.tan(fovRad);
+      camera.position.z = dist;
+      renderer.setSize(width, height)
+      renderer.setPixelRatio(window.devicePixelRatio)
+
+      // meshの位置調整
+      const x = (window.innerWidth / 2) - (imageSize.width / 2) - buffer.x;
+      const y = (window.innerHeight / 2) - (imageSize.height / 2) - buffer.y;
+      if (mesh && window.innerWidth > 767) mesh.position.set(x, -y, 0);
+    }
+    window.addEventListener('resize', resize)
+
     return () => {
-      window.removeEventListener('resize', resize)
+      window.removeEventListener('resize', resize);
     }
   }, [])
 

@@ -4,9 +4,11 @@ import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import Loading from '../loading';
 
 export const Demo01 = () => {
   const canvasRef = useRef(null);
+  const loadingRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -71,13 +73,14 @@ export const Demo01 = () => {
      * Model
      */
     const loader = new GLTFLoader();
-    const url = "../demo02.glb";
+    const url = "../demo01.glb";
 
     loader.load(
       url,
       (gltf) => {
         gltf.scene.scale.set(300, 300, 300);
         scene.add(gltf.scene);
+        if(loadingRef.current) loadingRef.current.style.display = 'none';
       },
       (error) => {
         // オブジェクトの読み込みが失敗したタイミングで実行
@@ -102,7 +105,12 @@ export const Demo01 = () => {
   }, [])
 
   return (
-    <canvas ref={canvasRef}></canvas>
+    <>
+      <div className='aboluste top-0 left-0 w-full h-full' ref={loadingRef}>
+        <Loading  />
+      </div>
+      <canvas ref={canvasRef}></canvas>
+    </>
   )
 }
 

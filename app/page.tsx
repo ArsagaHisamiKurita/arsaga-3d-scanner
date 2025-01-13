@@ -20,16 +20,16 @@ export const Home = () => {
       <span className="absolute top-[calc(100%_/_4_*_2)] left-0 w-full h-[1px] bg-main opacity-30"></span>
       <span className="absolute top-[calc(100%_/_4_*_3)] left-0 w-full h-[1px] bg-main opacity-30"></span>
       {/* キャンバス */}
-      <div className="absolute top-0 left-0 w-full h-full">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
         <Canvas />
       </div>
       {/* コンテンツ */}
-      <div className="relative p-16 text-white">
-        <h1 className="font-lato font-bold text-6xl">Arsaga 3D Scanner Experiments</h1>
-        <p className="mt-9 font-bold text-xl">「現実の形状をデジタルに。」</p>
-        <p className="mt-7 leading-8">Arsaga 3D Scanner Experimentsは、最先端の3Dスキャニング技術を用いて、<br />現実世界の形状や質感をデジタルデータとして記録・再現する実験的なプロジェクトです。<br />このサイトでは、スキャニングプロセスから得られる可能性と美しさを探求し、<br />未来のデザインやアートの新しい表現方法を模索しています。<br />リアルとバーチャルが交差する瞬間をご体感ください。</p>
+      <div className="relative md:p-16 p-8 text-white">
+        <h1 className="font-lato font-bold md:text-6xl text-2xl">Arsaga 3D Scanner Experiments</h1>
+        <p className="mt-9 font-bold md:text-xl text-base">「現実の形状をデジタルに。」</p>
+        <p className="mt-7 md:text-[1rem] text-xs leading-8">Arsaga 3D Scanner Experimentsは、最先端の3Dスキャニング技術を用いて、<br />現実世界の形状や質感をデジタルデータとして記録・再現する実験的なプロジェクトです。<br />このサイトでは、スキャニングプロセスから得られる可能性と美しさを探求し、<br />未来のデザインやアートの新しい表現方法を模索しています。<br />リアルとバーチャルが交差する瞬間をご体感ください。</p>
         <ul className="mt-4">
-          <li><a href="/demo01">・DEMO01</a></li>
+          <li><a href="/demo01" className="text-blue-500 font-bold">・DEMO01</a></li>
         </ul>
       </div>
     </div>
