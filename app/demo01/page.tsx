@@ -36,8 +36,8 @@ export const Demo01 = () => {
     const camera = new THREE.PerspectiveCamera(
       fov,
       width / height,
-      0.1,
-      2000
+      0.01,
+      10000
     );
     camera.position.z = dist;
 
@@ -73,7 +73,7 @@ export const Demo01 = () => {
      * Model
      */
     const loader = new GLTFLoader();
-    const url = "../demo01.glb";
+    const url = "../office02-iphone15-pro.glb";
 
     loader.load(
       url,
