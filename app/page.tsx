@@ -26,11 +26,14 @@ export const Home = () => {
       {/* コンテンツ */}
       <div className="relative md:p-16 p-8 text-white">
         <h1 className="font-lato font-bold md:text-6xl text-2xl">Arsaga 3D Scanner Experiments</h1>
-        <p className="mt-9 font-bold md:text-xl text-base">「現実の形状をデジタルに。」</p>
-        <p className="mt-7 md:text-[1rem] text-xs leading-8">Arsaga 3D Scanner Experimentsは、最先端の3Dスキャニング技術を用いて、<br />現実世界の形状や質感をデジタルデータとして記録・再現する実験的なプロジェクトです。<br />このサイトでは、スキャニングプロセスから得られる可能性と美しさを探求し、<br />未来のデザインやアートの新しい表現方法を模索しています。<br />リアルとバーチャルが交差する瞬間をご体感ください。</p>
-        <ul className="mt-4">
-          <li><a href="/demo01" className="text-blue-500 font-bold">・DEMO01</a></li>
+        <p className="mt-9 font-bold md:text-xl text-base">used by iPhone Application Scaniverse</p>
+        <p className="mt-7 md:text-[1rem] text-xs leading-8">Arsaga 3D Scanner Experiments このサイトは iPhone Application の <a href="https://apps.apple.com/jp/app/scaniverse-3d-scanner/id1541433223" target="_blank" rel="noreferrer noopener" className="text-blue-500 underline">Scaniverse</a> を使用して、<br />アルサーガオフィスの形状や質感をデジタルデータとして記録・再現する実験的なプロジェクトです。<br />近年の iPhone には LiDARスキャナ というレーザー光の反射を利用して、<br/>物や地形の「距離」を読み取る機能が搭載されています。<br/>この機能により高精度の3Dスキャンが可能と言われています。</p>
+        <div className="mt-6">
+          <p className="text-base leading-8">以下のリンクからデモをご覧いただけます。</p>
+          <ul className="mt-2">
+          <li><a href="/demo01" className="text-blue-500 font-bold">・アルサーガラウンジ(広角)</a></li>
         </ul>
+        </div>
       </div>
     </div>
   );

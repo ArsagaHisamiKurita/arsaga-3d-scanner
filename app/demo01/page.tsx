@@ -25,7 +25,7 @@ export const Demo01 = () => {
       alpha: true
     })
     renderer.setPixelRatio(window.devicePixelRatio)
-    // renderer.setClearColor(new THREE.Color(0x000000));
+    renderer.setClearColor(new THREE.Color(0x000000));
     renderer.setSize(width, height)
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 2.5;
@@ -39,13 +39,18 @@ export const Demo01 = () => {
       0.01,
       10000
     );
+    camera.position.x = 700;
+    camera.position.y = 400;
     camera.position.z = dist;
+    // camera.rotateX(-Math.PI / 4);
 
     const orbitcontrols = new OrbitControls(
 			camera,
 			renderer.domElement,
 		);
     orbitcontrols.enableDamping = true;
+    // orbitcontrols.enableZoom = false;
+
     // scene.add(new THREE.GridHelper(5000, 100));
 		// scene.add(new THREE.AxesHelper(500));
 
@@ -78,7 +83,7 @@ export const Demo01 = () => {
     loader.load(
       url,
       (gltf) => {
-        gltf.scene.scale.set(300, 300, 300);
+        gltf.scene.scale.set(55, 55, 55);
         scene.add(gltf.scene);
         if(loadingRef.current) loadingRef.current.style.display = 'none';
       },

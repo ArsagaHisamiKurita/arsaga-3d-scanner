@@ -15,7 +15,7 @@ export const Tile = () => {
     gsap.to(listRefs.current[randIndex].current, {
       duration: 0.1,
       delay: delay,
-      opacity: 0.92,
+      opacity: 0.95,
       onComplete: () => {
         gsap.to(listRefs.current[randIndex].current, {
           duration: 0.1,
