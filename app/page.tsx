@@ -29,10 +29,12 @@ export const Home = () => {
         <p className="mt-9 font-bold md:text-xl text-base">used by iPhone Application Scaniverse</p>
         <p className="mt-7 md:text-[1rem] text-xs leading-8">Arsaga 3D Scanner Experiments このサイトは iPhone Application の <a href="https://apps.apple.com/jp/app/scaniverse-3d-scanner/id1541433223" target="_blank" rel="noreferrer noopener" className="text-blue-500 underline">Scaniverse</a> を使用して、<br />アルサーガオフィスの形状や質感をデジタルデータとして記録・再現する実験的なプロジェクトです。<br />近年の iPhone には LiDARスキャナ というレーザー光の反射を利用して、<br/>物や地形の「距離」を読み取る機能が搭載されています。<br/>この機能により高精度の3Dスキャンが可能と言われています。</p>
         <div className="mt-6">
-          <p className="text-base leading-8">以下のリンクからデモをご覧いただけます。</p>
-          <ul className="mt-2">
-          <li><a href="/demo01" className="text-blue-500 font-bold">・アルサーガラウンジ(広角)</a></li>
-        </ul>
+          <p className="md:text-base text-xs leading-8">以下のリンクからデモをご覧いただけます。</p>
+          <ul className="mt-4">
+            <li><a href="/demo01" className="text-blue-500 font-bold">・アルサーガラウンジ(広角)</a></li>
+            <li className="mt-2"><a href="/demo02" className="text-blue-500 font-bold">・アルサーガ会議室(広角)</a></li>
+            <li className="mt-2"><a href="/demo03" className="text-blue-500 font-bold">・アルサーガラウンジ(回遊)</a></li>
+          </ul>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import Loading from '../loading';
 
 export const Demo01 = () => {
   const canvasRef = useRef(null);
-  const loadingRef = useRef(null);
+  const loadingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -78,7 +78,7 @@ export const Demo01 = () => {
      * Model
      */
     const loader = new GLTFLoader();
-    const url = "../office02-iphone15-pro.glb";
+    const url = "../rounge.glb";
 
     loader.load(
       url,
