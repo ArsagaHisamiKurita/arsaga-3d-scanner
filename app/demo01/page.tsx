@@ -111,7 +111,7 @@ export const Demo01 = () => {
 
   return (
     <>
-      <div className='aboluste top-0 left-0 w-full h-full' ref={loadingRef}>
+      <div className='fixed top-0 left-0 w-full h-full' ref={loadingRef}>
         <Loading  />
       </div>
       <canvas ref={canvasRef}></canvas>
