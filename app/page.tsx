@@ -1,7 +1,7 @@
 import { Canvas } from "./canvas";
 import { Tile } from "./tile";
 
-export const Home = () => {
+const Home = () => {
   return (
     <div className="relative w-full h-full">
       {/* タイル */}

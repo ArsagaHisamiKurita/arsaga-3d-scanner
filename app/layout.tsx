@@ -8,11 +8,12 @@ const notoSansJP = Noto_Sans_JP({
 
 const robot = Roboto({
   variable: '--font-robot',
+  subsets: ["latin"],
   weight: ["100", "300", "400", "700", "900"],
 });
 
 
-export const Layout =({
+const Layout =({
   children,
 }: Readonly<{
   children: React.ReactNode;

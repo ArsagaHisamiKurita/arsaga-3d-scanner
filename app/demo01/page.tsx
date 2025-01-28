@@ -6,7 +6,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import Loading from '../loading';
 
-export const Demo01 = () => {
+const Demo01 = () => {
   const canvasRef = useRef(null);
   const loadingRef = useRef<HTMLDivElement>(null);
 
