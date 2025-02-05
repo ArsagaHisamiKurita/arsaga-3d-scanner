@@ -31,9 +31,11 @@ const Home = () => {
         <div className="mt-6">
           <p className="md:text-base text-xs leading-8">以下のリンクからデモをご覧いただけます。</p>
           <ul className="mt-4">
-            <li><a href="/demo01" className="text-blue-500 font-bold">・アルサーガラウンジ(広角)</a></li>
-            <li className="mt-2"><a href="/demo02" className="text-blue-500 font-bold">・アルサーガ会議室(広角)</a></li>
-            <li className="mt-2"><a href="/demo03" className="text-blue-500 font-bold">・アルサーガラウンジ(回遊)</a></li>
+            <li><a href="/demo01" className="text-blue-500 font-bold">・アルサーガラウンジ(全体)</a></li>
+            <li className="mt-2"><a href="/demo02" className="text-blue-500 font-bold">・アルサーガラウンジ(一部)</a></li>
+            <li className="mt-2"><a href="/demo03" className="text-blue-500 font-bold">・アルサーガラウンジ(一部)</a></li>
+            <li className="mt-2"><a href="/demo04" className="text-blue-500 font-bold">・アルサーガラウンジ(一部)</a></li>
+            <li className="mt-2"><a href="/demo05" className="text-blue-500 font-bold">・アルサーガラウンジ(回遊)</a></li>
           </ul>
         </div>
       </div>

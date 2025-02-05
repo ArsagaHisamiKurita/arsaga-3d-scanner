@@ -5,6 +5,7 @@ import * as THREE from 'three'
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import Loading from '../loading';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 
 const Demo01 = () => {
   const canvasRef = useRef(null);
@@ -77,8 +78,13 @@ const Demo01 = () => {
     /**
      * Model
      */
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("../draco/");
+
     const loader = new GLTFLoader();
-    const url = "../rounge.glb";
+    loader.setDRACOLoader(dracoLoader);
+
+    const url = "../rounge-press.glb";
 
     loader.load(
       url,

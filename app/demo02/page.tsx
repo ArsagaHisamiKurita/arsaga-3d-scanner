@@ -5,6 +5,7 @@ import * as THREE from 'three'
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import Loading from '../loading';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 
 const Demo02 = () => {
   const canvasRef = useRef(null);
@@ -77,13 +78,17 @@ const Demo02 = () => {
     /**
      * Model
      */
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("../draco/");
+
     const loader = new GLTFLoader();
-    const url = "../room.glb";
+    loader.setDRACOLoader(dracoLoader);
+    const url = "../rounge-object-01-press.glb";
 
     loader.load(
       url,
       (gltf) => {
-        gltf.scene.scale.set(55, 55, 55);
+        gltf.scene.scale.set(170, 170, 170);
         scene.add(gltf.scene);
         if(loadingRef.current) loadingRef.current.style.display = 'none';
       },
