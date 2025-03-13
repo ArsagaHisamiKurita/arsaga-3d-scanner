@@ -26,8 +26,16 @@ const Home = () => {
       {/* コンテンツ */}
       <div className="relative md:p-16 p-8 text-white">
         <h1 className="font-lato font-bold md:text-6xl text-2xl">Arsaga 3D Scanner Experiments</h1>
-        <p className="mt-9 font-bold md:text-xl text-base">used by iPhone Application Scaniverse</p>
-        <p className="mt-7 md:text-[1rem] text-xs leading-8">Arsaga 3D Scanner Experiments このサイトは iPhone Application の <a href="https://apps.apple.com/jp/app/scaniverse-3d-scanner/id1541433223" target="_blank" rel="noreferrer noopener" className="text-blue-500 underline">Scaniverse</a> を使用して、<br />アルサーガオフィスの形状や質感をデジタルデータとして記録・再現する実験的なプロジェクトです。<br />近年の iPhone には LiDARスキャナ というレーザー光の反射を利用して、<br/>物や地形の「距離」を読み取る機能が搭載されています。<br/>この機能により高精度の3Dスキャンが可能と言われています。</p>
+        <p className="mt-9 font-bold md:text-xl text-base">Used with iPhone Application Scaniverse</p>
+        <p className="mt-7 md:text-[1rem] text-xs leading-8">
+        ※このサイトは、アルサーガが開催した「年末年始開発コンテスト2025」において、社員が自主的に設計・開発したものです。<br />
+        「年末年始開発コンテスト2025」の詳細はこちら<br />
+        <a href="https://www.arsaga.jp/news/blog-year-end-new-year-dev-contest-2025/" target="_blank" rel="noreferrer noopener" className="text-blue-500 underline">https://www.arsaga.jp/news/blog-year-end-new-year-dev-contest-2025/</a><br />
+          このサイトは iPhone Application の <a href="https://apps.apple.com/jp/app/scaniverse-3d-scanner/id1541433223" target="_blank" rel="noreferrer noopener" className="text-blue-500 underline">Scaniverse</a> を使用して、<br />
+          アルサーガオフィスの形状や質感をデジタルデータとして記録・再現する実験的なプロジェクトです。<br />
+          近年の iPhone には LiDARスキャナ というレーザー光の反射を利用して、<br/>
+          物や地形の「距離」を読み取る機能が搭載されています。<br/>
+          </p>
         <div className="mt-6">
           <p className="md:text-base text-xs leading-8">以下のリンクからデモをご覧いただけます。</p>
           <ul className="mt-4">
