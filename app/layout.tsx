@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: 'https://d1vreyr5jpg65u.cloudfront.net/ogp.png',
+        url: 'https://www.arsaga.jp/wp-content/newyear-dev-2025/ogp.png',
       },
     ],
   },
